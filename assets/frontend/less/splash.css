@@ -1,0 +1,50 @@
+.social-share.top {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  right: 0;
+}
+.social-share ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.social-share ul li {
+  display: inline-block;
+  padding: 0;
+  margin: 0 5px;
+}
+.social-share ul li a {
+  height: 40px;
+  width: 40px;
+  background: #fff;
+  display: block;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  border-radius: 50%;
+  -webkit-transition: background-color 0.3s, -webkit-transform 0.3s;
+  -moz-transition: background-color 0.3s, -moz-transform 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
+  -ms-transition: background-color 0.3s, -ns-transform 0.3s;
+}
+.social-share ul li a i {
+  color: #000;
+  font-size: 20px;
+  line-height: 30px;
+  -webkit-transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  -ms-transition: color 0.3s;
+  transition: color 0.3s;
+}
+.social-share ul li a:hover {
+  background: #000;
+  -webkit-transform: scale(1.2, 1.2);
+  -moz-transform: scale(1.2, 1.2);
+  -ms-transform: scale(1.2, 1.2);
+  transform: scale(1.2, 1.2);
+}
+.social-share ul li a:hover i {
+  color: #fff;
+}

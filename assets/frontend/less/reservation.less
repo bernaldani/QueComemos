@@ -1,0 +1,46 @@
+.reservation { color: @textColor; padding-top: 150px;
+	.owl-carousel { margin-bottom: 40px; }
+	span {
+		&.part { cursor: pointer;}
+	}
+	h1 { text-transform: uppercase; font-size: 24px; color: @headerTxt; margin: 0 0 20px 0}
+	img { display: block; width: 100%; height: auto;}
+	.info-reservation { margin-bottom: 30px; 
+		p { font-size: 14px; font-weight: 300; margin-bottom: 40px;}
+	}
+	.calendar { margin-bottom: 30px; }
+	.session { 
+		ul { list-style-type: none; padding-left: 0; 
+			li { position: relative; margin-left: 10px;
+			}
+		}
+	}
+	.people {
+		ul { list-style-type: none; margin: 0; padding: 0; 
+			li { float: left; width: 50%; margin: 0; padding: 0 0 20px 0; color: @textColor2; text-align: center; }
+		}
+	}
+	.time { font-weight: 300; margin-bottom: 30px; 
+		p { cursor: default; position: relative; text-align: center; }
+		
+
+		select { position: absolute; top: 0; opacity: 0; cursor: pointer; width: 100%;
+			&#select-hour { left: 0 ; width: 28px;}
+			&#select-minutes { left: 0 ; width: 28px;}
+		}
+	}
+	.select-date {cursor: default; margin-bottom: 30px;
+		div.select-time { position: relative; display:inline-block; font-size: 14px; font-weight: 300; margin-bottom:10px;  border: 1px solid @borderColor; padding: 10px; cursor: pointer;
+			.transition(e('background-color 0.3s, color 0.3s'));
+			select { position: absolute; top: 0; padding: 10px 0; opacity: 0; cursor: pointer; width: 100%; left: 0; border: 10px solid transparent;}
+			&:hover { background: @headerTxt; color: @bgColor;};
+		}		
+	}
+	.form { 
+
+		.submit { float: right}
+	}
+	.input-wrapper.error {
+		input, textarea { border-color: rgb(255, 144, 144); }
+	}
+}

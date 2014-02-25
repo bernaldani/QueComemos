@@ -1,0 +1,51 @@
+#contact { padding-top: 150px;
+	h1 { text-transform: uppercase; font-size: 22px; color: @headerTxt; margin-top: 0; margin-bottom: 20px}
+	p { font-weight: 300; font-size: 14px; color: @textColor }
+	#map { width: 100%; height: 300px; margin-bottom: 30px;
+		img { display: block; width: 100%;}
+	}
+	.info, .social-media { margin: 10px 0; overflow: hidden;}
+	.vcard { margin: 10px 0; overflow: hidden;
+		.adr {
+			span { display: block;}
+		}
+		.email { 
+			a { color: @textColor;
+				&:hover { text-decoration: none}
+			}
+		}
+		.tel { display: block}
+	}
+}
+
+.form {
+	form { color: @formColor; font-size: 14px;margin: 10px 0; overflow: hidden;
+		.contact-form { border: 1px solid @borderColor; margin-bottom: 10px; padding: 5px; width: 100%;}
+		.placeholders(@placeholderColor, 300);
+		input:focus, textarea:focus { outline: none}
+		.buttonform { border: none; background: transparent; text-transform: uppercase; float: right; font-size: 14px; 
+			&:hover { color: fade(@headerTxt, 50%)}
+		}
+		textarea { resize: none}
+	}
+	.alert-danger { margin-top: 10px}
+	.form-error { border: solid 1px #eed3d7; border-radius: 4px; background: #f2dede; margin: 10px 0; 
+		.alert-danger { border: none; background: transparent; border-radius: 0; margin-top: 0; margin: 0}
+		.alert { padding: 8px 15px}
+	}
+	.input-wrapper.error {
+		input, textarea { border-color: rgb(255, 144, 144); }
+	}
+}
+
+.social-media { margin-left: 10px;
+	ul { margin: 0; padding: 0; 
+		li { display: inline-block; margin-right: 10px;
+			a { width: 26px; height: 26px; background: @iconColor; color: @iconColor2; display: block; text-align: center; line-height: 30px; -webkit-transition: background-color 0.3s, -webkit-transform 0.3s; -moz-transition: background-color 0.3s, -moz-transform 0.3s; transition: background-color 0.3s, transform 0.3s; 
+			-ms-transition: background-color 0.3s, -ms-transform 0.3s; 
+				i { font-size: 20px; color: @iconColor2; }
+				&:hover { background: @highlight; }
+			}
+		}
+	}
+}

@@ -1,0 +1,45 @@
+.menu {font-family: 'Covered By Your Grace', cursive; color: @menuHeaderColor; padding-top: 150px;
+	// &:after { content: ""; position: fixed; width: 100%; height: 100%; background: url('../img/chalkboard-loop.jpg') center center; top: 0; left: 0; z-index: -1;}
+	p,span,h2,h1 {font-family: 'Covered By Your Grace', cursive; }
+	h1 { font-size: 50px; text-align: center;}
+	h2 { font-size: 40px; margin: 30px 0;}
+	i { font-size: 30px}
+	.menu-list { position: relative; margin-bottom: 20px; line-height: 1.5em;
+		.menu-item { margin-right: 100px;
+			.title { font-size: 25px; color: @menuHeaderColor; position: relative; left: 30px; margin-bottom: 0;
+				span { font-size: 18px}
+				&:before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: @menuHeaderColor; position: absolute; left: -30px; top: 8px}
+			}
+			.description { font-size: 18px; color: @menuTxtColor; margin-left: 30px; }
+		}
+		.price { font-size: 40px; width: 100px; position: absolute; top: 10px; right: 0; text-align: right}
+	}
+}
+
+#second-menu, #third-menu {
+	.menu-header { margin: 0 20px; overflow: hidden;
+			h2 { text-align: center;
+				span {position: relative;
+					&:before { content: ""; background: @menuHeaderColor; width: 500%; height: 2px; position: absolute; right: 120%; top: 50%;}
+					&:after { content: ""; background: @menuHeaderColor; width: 500%; height: 2px; position: absolute; left: 120%; top: 50%;}
+				}
+			}
+		
+	}
+	.menu-item {text-align: center; margin: 0;
+		.description { margin-left: 0; margin: 0 20px; }
+		.title { left: 0; margin-bottom: 10px;
+			&:before { width: 0; height: 0}
+		}
+		.price { text-align: center; position: inherit; width: auto; top: 0; margin-top: 15px;}
+	}
+	
+}
+
+#third-menu { 
+	figure { margin: auto; width: 65%; margin-bottom: 30px;
+		img { width: 100%; display: block;}
+	}
+}
+
+#menu-bg { content: ""; position: fixed; width: 100%; height: 100%; background: url('../img/chalkboard-loop.jpg') center center; top: 0; left: 0; z-index: -1; display: none;}

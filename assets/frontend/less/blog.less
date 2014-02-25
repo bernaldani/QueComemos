@@ -1,0 +1,79 @@
+#blog {
+	
+	.blog-post { margin: 40px 0; border-bottom: 1px solid @headerTxt;
+		&:last-child { border: none}
+		&:first-child { margin-top: 0;}
+	}
+	.text-post {
+		p { margin: 0 0 40px}
+	}
+	.square-post {
+		.days li { font-size: 14px;}
+		.title { font-size: 27px;}
+	}
+}
+
+#post { padding-top: 150px; 
+	.form {
+		.form-error, .alert-success { width: 50%;}
+	}
+}
+
+.blog {
+	.hover-post {
+		figure {
+			&:after { content: "\f064"; font-family: fontAwesome; display: block; height: 50px; width: 50px; position: absolute; left: 50%; top: 50%; margin-left: -25px; margin-top: -25px; font-size: 40px; line-height: 50px; text-align: center; color: @bgColor;  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;  -moz-transition: -moz-transform 0.3s, opacity 0.3s;  transition: transform 0.3s, opacity 0.3s;  -ms-transition: -ms-transform 0.3s, opacity 0.3s; .translate(0, 20px); opacity: 0; }		
+		}	
+		&:hover { 
+			figure {
+				&:after { opacity: 1; .translate(0,0);}
+			}
+			img { opacity: 0.1;}
+		}			
+	}
+	.img-blog { display: block; background: #111; position: relative;
+		img { width: 100%; }
+
+
+	}
+	header { overflow: hidden; position: relative; color: @headerTxt;
+		h1 { font-size: 24px; margin: 30px 0; float: left }
+		.data-post { float: right; margin: 30px 0;
+			.date-post {font-size: 14px; color: @headerTxt; vertical-align: middle;}
+			.author-post { font-size: 12px; vertical-align: middle; color: @headerTxt; border-left: solid 1px @headerTxt; padding-left: 5px; line-height: 24px; }
+		}
+	}
+	.text-post {
+		p { text-align: justify; text-justify: auto; color: @textColor; font-weight: 300; font-size: 14px;}
+	}
+	.blog-gallery { overflow: hidden; margin: 40px 0; 
+			a {width: 25%; float: left;}
+			figure { display: block;
+			img { width: 100%; display: block;}
+		}
+	}
+	#comments { 
+		.comments { padding: 0; border-bottom: 1px solid @headerTxt; padding-top: 40px; margin-top: 40px;  padding-bottom: 20px; margin-bottom: 40px; 
+			> li:first-child { padding:0; border-top: none;}
+			li { border-top: 1px solid @headerTxt; padding-top: 20px; overflow: hidden; list-style-type: none }
+			.photo-user { display: block; float: left;}
+			.author-comment { margin-left: 90px; line-height: 1.5em;
+				strong { font-size: 14px; color: @headerTxt; text-transform: uppercase;}
+				.date-post { font-size: 13px; color: @headerTxt; float: right}
+				p { color: @textColor; line-height: 1.5em; font-weight: 300; text-align: justify; text-justify: auto; font-size: 12px;}
+			}
+			.contact-form { border-color: transparent !important;}
+		}
+	}
+	.form {
+		form { margin: 0; overflow: inherit;
+			.input-wrapper { display: inline-block; position: relative;}
+			.submit, .message {
+				&:before { content: ""; width: 1px; height: 40px; background: @headerTxt; position: absolute; top: -8px; left: 0;}
+			}
+			.contact-form { margin: 0; border-color: transparent !important;}
+			.buttonform { float: none; display: inline-block; padding: 0 0 0 30px}
+			textarea { min-width: 300px; padding: 0 30px}
+		}
+	}
+}

@@ -1,0 +1,23 @@
+#team { padding-top: 150px; 
+	.team { margin: 20px 0}
+	.photo-person { 
+		.base-photo { -webkit-transition: -webkit-transform 0.5s, opacity 0.5s; transition: transform .5s, opacity .5s;
+		 -moz-transition: -moz-transform .5s opacity .5s; -ms-transition: -ms-transform .5s, opacity .5s;}
+		.color-photo {position: absolute; left: 0; top: 0; opacity: 0; -webkit-transition: -webkit-transform 0.5s, opacity 0.5s; transition: transform .5s, opacity .5s;
+		 -moz-transition: -moz-transform .5s opacity .5s; -ms-transition: -ms-transform .5s, opacity .5s; .translate(-100%, 0)}
+		&:hover { 
+			.base-photo { opacity: 0; .translate(100%, 0)}
+			.color-photo { opacity: 1; .translate(0, 0px);}
+		}		
+		figure { margin: 0 -10px; position: relative; overflow: hidden;
+			img {display: block; width: 100%;}
+		}
+	}
+	.name { margin-left: 10px;
+		strong { display: block; font-size: 22px; color: @headerTxt; line-height: 18px; margin: 20px 0 0;}
+		span { display: block; font-size: 14px; color: @textColor2; margin: 5px 0; }
+	}
+	.description { margin: 20px 0; font-size: 14px; color: @textColor; margin-left: 10px; font-weight: 200}
+	
+}
+

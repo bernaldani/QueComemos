@@ -1,0 +1,97 @@
+@media (max-width: (@screen-xs - 1)) {
+	.contact, #blog, #restaurant, #team,
+	.reservation {padding-top: 65px !important;}
+	.menu { padding: 65px 10px 0 !important;}
+	// body { padding-top: 65px;}
+	
+	.form {
+		form {
+			.submit, .message {
+				&:before { content: none !important}
+			}
+			.buttonform { padding: 0 !important; display: block !important; }
+			.input-wrapper  { margin: 10px 0; width: 100% !important; display: inline-block;}
+			.contact-form { padding: 10px; width: 100%; margin: 0 }
+			textarea { padding: 10px !important; min-height: 150px !important}
+			.submit { margin: 10px 0 20px 0;}
+			.name, .message { width: 100%}
+			.name { margin-top: 0 !important}
+		}
+	}
+	.blog {	
+		.blog-gallery { 
+			a {width: 100%; }
+		}
+	}
+
+	#post {
+		.form {
+			form {
+				.buttonform {float: right}
+			}
+		}
+	}
+	.reservation {
+		.form { 
+			.contact-form { line-height: initial; float: none !important}
+		}
+		.time { 
+			h1 { margin-left: -10px}
+		}
+	}
+}
+
+@media (max-width: (@screen-sm - 1)) {
+	// body { padding-top: 65px;}
+	.menu { padding: 0 30px; padding-top: 150px;
+		.menu-list {
+			.price { font-size: 30px; top: 0;}
+			.menu-item { margin-right: 50px;
+				.title {left: 0;
+					&:before { display: none}
+				}
+				.description { margin-left: 0}
+			}
+		}
+	}
+	.social-share {
+		&.top {bottom: 20px; top: inherit;}
+	}
+	#restaurant { 
+		.square-big { height: 200px;}
+		.square {
+			img { width: 100%; height: auto;  }
+		}
+	}	
+}
+
+@media (min-width: @screen-xs) and (max-width: (@screen-sm - 1)){
+	.blog {	
+		.blog-gallery { 
+			a {width: 50%; }
+		}
+	}
+}
+
+@media (min-width: @screen-sm) and (max-width: (@screen-md - 1)){
+	body { padding-top: 98px;}
+	#restaurant { 
+		.square-big { height: 200px;}
+		.square {
+			img { width: 100%; height: auto;  }
+		}	
+		#carousel-menu { 
+            img { height: 100% !important;}
+        }	
+	}
+}
+
+@media (min-width: @screen-md) and (max-width: (@screen-lg - 1)){
+	#restaurant { 
+		.square-post {
+			.days { 
+				li { font-size: 16px; }
+			}
+		}
+	}
+}
