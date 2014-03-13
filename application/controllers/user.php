@@ -11,7 +11,7 @@ class User extends REST_Controller {
 		$this->load->library(array('account/authentication', 'account/authorization'));
 		$this->load->language(array('general', 'account/sign_up', 'account/connect_third_party', 'account/account_settings'));
 		$this->load->helper(array('language', 'account/ssl', 'url'));
-		$this->load->model(array('account/account_model', 'account/account_details_model'));
+		$this->load->model(array('account/account_model', 'account/account_details_model', 'account/account_facebook_model'));
 
         $this->methods['fblogin_post']['key'] = false;
         $this->methods['twlogin_post']['key'] = false;
@@ -37,10 +37,7 @@ class User extends REST_Controller {
 
 			$attributes = array(
 					'firstname' => $this->post('firstname'),
-					'lastname' 	=> $this->post('lastname'),
-					'city'		=> $this->post('city'),
-					'country' 	=> $this->post('country'),
-					'dob' 		=> $this->post('dob')
+					'lastname' 	=> $this->post('lastname')
 				);
 
 			$account_id = $this->account_model->create(null,$email,null);
@@ -66,9 +63,19 @@ class User extends REST_Controller {
 		{
 			$user = $this->account_model->get_by_email($this->post('email'));
 
-			$this->authentication->sign_in($user->id);
+			// Check password
+			if ( ! $this->authentication->check_password($user->password, $this->post('password')))
+			{
+				$this->response(array('status' => 'error', 'message' => 'La contraseña no es correcta'), 102);
+			}
+			else
+			{
+				// Run sign in routine
+				$this->authentication->sign_in($user->id);
 
-			$this->response(array('status' => 'success', 'message' => 'Sesion iniciada con exito'), 200);
+				$this->response(array('status' => 'success', 'message' => 'Sesion iniciada con exito'), 200);
+			}
+
 		}
 		else
 		{
