@@ -50,7 +50,7 @@ $active_record = TRUE;
 
 $db['development']['hostname'] = 'localhost';
 $db['development']['username'] = 'quecomemos-dev';
-$db['development']['password'] = '$Jqc0j&52';
+$db['development']['password'] = '$rsO0z36';
 $db['development']['database'] = 'codeigniter_quecomemos_dev';
 $db['development']['dbdriver'] = 'mysqli';
 $db['development']['dbprefix'] = '';
@@ -66,7 +66,7 @@ $db['development']['stricton'] = FALSE;
 
 $db['staging']['hostname'] = 'localhost';
 $db['staging']['username'] = 'quecomemos-dev';
-$db['staging']['password'] = '$Jqc0j&52';
+$db['staging']['password'] = '$rsO0z36';
 $db['staging']['database'] = 'codeigniter_quecomemos_dev';
 $db['staging']['dbdriver'] = 'mysqli';
 $db['staging']['dbprefix'] = '';
@@ -82,7 +82,7 @@ $db['staging']['stricton'] = FALSE;
 
 $db['production']['hostname'] = 'localhost';
 $db['production']['username'] = 'quecomemos-dev';
-$db['production']['password'] = '$Jqc0j&52';
+$db['production']['password'] = '$rsO0z36';
 $db['production']['database'] = 'codeigniter_quecomemos_dev';
 $db['production']['dbdriver'] = 'mysqli';
 $db['production']['dbprefix'] = '';
