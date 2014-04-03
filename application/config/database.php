@@ -49,7 +49,7 @@ $active_group = ENVIRONMENT;
 $active_record = TRUE;
 
 $db['development']['hostname'] = 'localhost';
-$db['development']['username'] = 'quecomemos';
+$db['development']['username'] = 'quecomemos-dev';
 $db['development']['password'] = '$Jqc0j&52';
 $db['development']['database'] = 'codeigniter_quecomemos_dev';
 $db['development']['dbdriver'] = 'mysqli';
