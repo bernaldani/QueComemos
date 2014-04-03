@@ -65,9 +65,9 @@ $db['development']['autoinit'] = TRUE;
 $db['development']['stricton'] = FALSE;
 
 $db['staging']['hostname'] = 'localhost';
-$db['staging']['username'] = 'worthy_staging';
-$db['staging']['password'] = 'VC0hX1WL4P65zvF';
-$db['staging']['database'] = 'webapp_worthy_staging';
+$db['staging']['username'] = 'quecomemos-dev';
+$db['staging']['password'] = '$Jqc0j&52';
+$db['staging']['database'] = 'codeigniter_quecomemos_dev';
 $db['staging']['dbdriver'] = 'mysqli';
 $db['staging']['dbprefix'] = '';
 $db['staging']['pconnect'] = TRUE;
@@ -81,9 +81,9 @@ $db['staging']['autoinit'] = TRUE;
 $db['staging']['stricton'] = FALSE;
 
 $db['production']['hostname'] = 'localhost';
-$db['production']['username'] = '';
-$db['production']['password'] = '';
-$db['production']['database'] = '';
+$db['production']['username'] = 'quecomemos-dev';
+$db['production']['password'] = '$Jqc0j&52';
+$db['production']['database'] = 'codeigniter_quecomemos_dev';
 $db['production']['dbdriver'] = 'mysqli';
 $db['production']['dbprefix'] = '';
 $db['production']['pconnect'] = TRUE;
