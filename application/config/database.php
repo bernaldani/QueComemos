@@ -49,9 +49,9 @@ $active_group = ENVIRONMENT;
 $active_record = TRUE;
 
 $db['development']['hostname'] = 'localhost';
-$db['development']['username'] = 'root';
-$db['development']['password'] = '123456';
-$db['development']['database'] = 'quecomemos_dev';
+$db['development']['username'] = 'quecomemos';
+$db['development']['password'] = '$Jqc0j&52';
+$db['development']['database'] = 'codeigniter_quecomemos_dev';
 $db['development']['dbdriver'] = 'mysqli';
 $db['development']['dbprefix'] = '';
 $db['development']['pconnect'] = TRUE;
