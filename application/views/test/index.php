@@ -13,16 +13,17 @@
         $('#' + output_div).html(JSON.stringify(data, null, ' '));
       },
       error: function(xhr, status, err) {
-        if(xhr.responseText != '') {
-          var error_data = $.parseJSON(xhr.responseText);
+        console.log(xhr,status,err);
+        // if(xhr.responseText != '') {
+        //   var error_data = $.parseJSON(xhr.responseText);
 
-          if(error_data) {
-            $('#' + output_div).html(JSON.stringify(error_data, null, ' '));
-          }
-        }
-        else {
-          $('#' + output_div).html('');
-        }
+        //   if(error_data) {
+        //     $('#' + output_div).html(JSON.stringify(error_data, null, ' '));
+        //   }
+        // }
+        // else {
+        //   $('#' + output_div).html('');
+        // }
       },
       data: $.param($.parseJSON(data))
     });
@@ -52,6 +53,36 @@
 <!-- login/login -->
 <form>
   <fieldset>
+    <legend>Facebook Login</legend>
+    <p><b>Endpoint:</b> /user/fblogin</p>
+    <p><b>Method:</b> POST</p>
+    <div class="control-group">
+      <div class="controls">
+        <b>Parameters:</b><br/>
+        <textarea id="api-user-fblogin-data" rows="5" style="width:500px;">
+        {
+          "email": "",
+          "password": "monkey19"
+        }
+        </textarea>
+      </div>
+    </div>
+    <input value="Test" type="button" class="btn" onclick="callAPI('', 'user/fblogin', $('#api-user-fblogin-data').val(), 'POST', 'api-user-fblogin-update')" />
+ </fieldset>
+</form>
+<p><b>Output</b></p>
+<pre id="api-user-fblogin-update">
+{
+  "id": 1,
+  "name": "Eve",
+  "cloak_price: "5.00",
+  "api_key": "e013a78f6c5ec04a32b7c88b0f8f3ca99f42c1ec"
+}
+</pre>
+
+<!-- login/login -->
+<form>
+  <fieldset>
     <legend>User Login</legend>
     <p><b>Endpoint:</b> /user/fblogin</p>
     <p><b>Method:</b> POST</p>
@@ -66,7 +97,7 @@
         </textarea>
       </div>
     </div>
-    <input value="Test" type="button" class="btn" onclick="callAPI('', 'user/fblogin', $('#api-user-login-data').val(), 'POST', 'api-user-login-update')" />
+    <input value="Test" type="button" class="btn" onclick="callAPI('', 'user/login', $('#api-user-login-data').val(), 'POST', 'api-user-login-update')" />
  </fieldset>
 </form>
 <p><b>Output</b></p>

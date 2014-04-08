@@ -64,9 +64,9 @@ class User extends REST_Controller {
 			$user = $this->account_model->get_by_email($this->post('email'));
 
 			// Check password
-			if ( ! $this->authentication->check_password($user->password, $this->post('password')))
+			if (!$user || ! $this->authentication->check_password($user->password, $this->post('password')))
 			{
-				$this->response(array('status' => 'error', 'message' => 'La contraseña no es correcta'), 102);
+				$this->response(array('status' => 'error', 'message' => 'Usuario o contraseña no valida'), 401);
 			}
 			else
 			{
