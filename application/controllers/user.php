@@ -58,6 +58,7 @@ class User extends REST_Controller {
 
 	function login_post()
 	{
+
 		// Check if email already exist
 		if ($this->email_check($this->post('email')) === TRUE)
 		{
@@ -79,7 +80,7 @@ class User extends REST_Controller {
 		}
 		else
 		{
-			$this->response(array('status' => 'error', 'message' => 'La cuenta no existe'), 102);
+			$this->response(array('status' => 'error', 'message' => 'La cuenta no existe'), 401);
 		}
 	}
 
