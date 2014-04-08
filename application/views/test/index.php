@@ -13,17 +13,17 @@
         $('#' + output_div).html(JSON.stringify(data, null, ' '));
       },
       error: function(xhr, status, err) {
-        console.log(xhr,status,err);
-        // if(xhr.responseText != '') {
-        //   var error_data = $.parseJSON(xhr.responseText);
+        //console.log(xhr,status,err);
+        if(xhr.responseText != '') {
+          var error_data = $.parseJSON(xhr.responseText);
 
-        //   if(error_data) {
-        //     $('#' + output_div).html(JSON.stringify(error_data, null, ' '));
-        //   }
-        // }
-        // else {
-        //   $('#' + output_div).html('');
-        // }
+          if(error_data) {
+            $('#' + output_div).html(JSON.stringify(error_data, null, ' '));
+          }
+        }
+        else {
+          $('#' + output_div).html('');
+        }
       },
       data: $.param($.parseJSON(data))
     });
